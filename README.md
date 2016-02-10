@@ -43,12 +43,13 @@ here.
 
 ### Beginning with base
 
-To have Puppet install latest `net-tools` and `wget` OS packages, declare the following hiera hash:
+To have Puppet install latest `net-tools` and standard `wget` OS packages, declare the following hiera hash:
 
 ``` yaml
 base::packages_list:
   # net-tools provides netstat
-  'net-tools': {}
+  'net-tools':
+    ensure: latest
   'wget': {}
 ```
 
