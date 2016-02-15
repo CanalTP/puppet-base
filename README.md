@@ -1,12 +1,12 @@
-# base
+# create_resources
 
 #### Table of Contents
 
 1. [Description](#description)
-1. [Setup - The basics of getting started with base](#setup)
-    * [What base affects](#what-base-affects)
+1. [Setup - The basics of getting started with create_resources](#setup)
+    * [What create_resources affects](#what-create_resources-affects)
     * [Setup requirements](#setup-requirements)
-    * [Beginning with base](#beginning-with-base)
+    * [Beginning with create_resources](#beginning-with-create_resources)
 1. [Usage - Configuration options and additional functionality](#usage)
 1. [Reference - An under-the-hood peek at what the module is doing and how](#reference)
 1. [Limitations - OS compatibility, etc.](#limitations)
@@ -14,12 +14,12 @@
 
 ## Description
 
-This module will let you manage some basic things on your server.
+This module will let you manage Hiera hash for Puppet standard resource types.
 This can be OS packages to install, etc...
 
 ## Setup
 
-### What base affects **OPTIONAL**
+### What create_resources affects **OPTIONAL**
 
 If it's obvious what your module touches, you can skip this section. For
 example, folks can probably figure out that your mysql_instance module affects
@@ -41,12 +41,12 @@ If your most recent release breaks compatibility or requires particular steps
 for upgrading, you might want to include an additional "Upgrading" section
 here.
 
-### Beginning with base
+### Beginning with create_resources
 
 To have Puppet install latest `net-tools` and standard `wget` OS packages, declare the following hiera hash:
 
 ``` yaml
-base::packages_list:
+create_resources::packages_list:
   # net-tools provides netstat
   'net-tools':
     ensure: latest

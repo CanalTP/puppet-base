@@ -1,4 +1,4 @@
-# The baseline for module testing used by Puppet Labs is that each manifest
+# The create_resourcesline for module testing used by Puppet Labs is that each manifest
 # should have a corresponding test manifest that declares that class or defined
 # type.
 #
@@ -9,4 +9,4 @@
 # Learn more about module testing here:
 # http://docs.puppetlabs.com/guides/tests_smoke.html
 #
-include base
+include create_resources

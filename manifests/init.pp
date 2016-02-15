@@ -1,7 +1,7 @@
-# Class: base
+# Class: create_resources
 # ===========================
 #
-# Full description of class base here.
+# Full description of class create_resources here.
 #
 # Parameters
 # ----------
@@ -28,7 +28,7 @@
 # --------
 #
 # @example
-#    class { 'base':
+#    class { 'create_resources':
 #      servers => [ 'pool.ntp.org', 'ntp.local.company.com' ],
 #    }
 #
@@ -42,13 +42,13 @@
 #
 # Copyright 2016 Rudy YAYON.
 #
-class base (
+class create_resources (
   $packages_list   = undef,
   $packages_ensure = installed,
   $if_noop         = $::clientnoop,
 )  {
 
-  class { '::base::packages': } ->
-  Class['::base']
+  class { '::create_resources::packages': } ->
+  Class['::create_resources']
 
 }
